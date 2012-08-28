@@ -21,6 +21,12 @@ has_xpath_object_list "territories" => '/ldml/localeDisplayNames/territories/ter
     handles => {
         all_territories => 'elements',
     };
+has_xpath_object_map "territory_map" => '/ldml/localeDisplayNames/territories/territory',
+    './@type' => 'Unicode::CLDR::Territory',
+    handles => {
+        get_territory => 'get',
+        territory_ids => 'keys',
+    };
 
 finalize_class();
 

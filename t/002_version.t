@@ -5,12 +5,13 @@ use warnings;
 use Test::More;
 use Unicode::CLDR;
 
-my $cldr = Unicode::CLDR->new( locale => 'zh_Hans_CN' );
+my $cldr = Unicode::CLDR->new();
 isa_ok( $cldr, 'Unicode::CLDR' );
 
-can_ok( $cldr, qw(locale) );
-isa_ok( $cldr->locale, 'Unicode::CLDR::Locale' );
-my $locale = $cldr->locale;
+can_ok( $cldr, qw(get_locale) );
+my $locale = $cldr->get_locale('zh_Hans_CN');
+isa_ok( $locale, 'Unicode::CLDR::Locale' );
+
 isa_ok( $locale->identity, 'Unicode::CLDR::Identity' );
 can_ok( $locale->identity, qw(version date language_id territory_id script_id) );
 

@@ -31,7 +31,7 @@ has 'locale' => (
 sub _build_locale {
     my ($self) = @_;
     return Unicode::CLDR::Locale->new(
-        file => $self->database_dir->subdir('main')->file($self->_loc . '.xml')
+        file => "" . $self->database_dir->subdir('main')->file($self->_loc . '.xml')
     );
 }
 
@@ -46,7 +46,7 @@ sub _build_parent_locale {
     return $self->locale unless $self->_loc =~ /_/;
     ( my $parent_locale = $self->_loc ) =~ s/^(.+)_.*$/$1/;
     return Unicode::CLDR::Locale->new(
-        file => $self->database_dir->subdir('main')->file($parent_locale . '.xml')
+        file => "" . $self->database_dir->subdir('main')->file($parent_locale . '.xml')
     );
 }
 

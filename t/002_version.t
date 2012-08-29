@@ -22,4 +22,8 @@ is( $locale->identity->language_id, 'zh', 'file language looks sane' );
 is( $locale->identity->script_id, 'Hans', 'file script looks sane' );
 is( $locale->identity->territory_id, 'CN', 'file territory looks sane' );
 
+my $en_us_posix = $cldr->get_locale('en_US_POSIX');
+isa_ok( $en_us_posix, 'Unicode::CLDR::Locale' );
+is( $en_us_posix->identity->variant_id, 'POSIX', 'file variant looks sane' );
+
 done_testing();

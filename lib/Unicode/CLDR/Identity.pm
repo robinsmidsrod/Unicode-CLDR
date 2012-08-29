@@ -29,7 +29,7 @@ has 'date' => (
 
 sub _build_date {
     my ($self) = @_;
-    ( my $date = $self->_date_str ) =~ s/^\$Date: \s*? ( \d{4}-\d{1,2}-\d{1,2} ) .* $/$1/x;
+    ( my $date = $self->_date_str ) =~ s/^\$Date: \s*? ( \d{4}-\d{1,2}-\d{1,2} ) \s+? (\d{1,2}:\d{1,2}:\d{1,2}) .* $/$1T$2/x;
     return DateTime::Format::ISO8601->parse_datetime($date);
 }
 
@@ -37,5 +37,6 @@ sub _build_date {
 has_xpath_value 'language_id'  => './language/@type';
 has_xpath_value 'script_id'    => './script/@type';
 has_xpath_value 'territory_id' => './territory/@type';
+has_xpath_value 'variant_id'   => './variant/@type';
 
 finalize_class();

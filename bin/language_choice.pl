@@ -5,6 +5,9 @@ use rlib;
 use Unicode::CLDR;
 use feature 'say';
 
+# ABSTRACT: Example of how you can do a language choice screen in multiple languages
+# PODNAME: language_choice.pl
+
 STDOUT->binmode("utf8");
 
 my $cldr = Unicode::CLDR->new();

@@ -1,4 +1,5 @@
 package Unicode::CLDR::Locale;
+
 use XML::Rabbit::Root;
 
 # ABSTRACT: Access data from a specific locale file

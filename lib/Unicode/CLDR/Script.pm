@@ -1,4 +1,5 @@
 package Unicode::CLDR::Script;
+
 use XML::Rabbit;
 
 # ABSTRACT: Script names, a.k.a. writing systems

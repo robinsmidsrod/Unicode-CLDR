@@ -1,4 +1,5 @@
 package Unicode::CLDR::Territory;
+
 use XML::Rabbit;
 
 # ABSTRACT: Territory names, a.k.a. countries and regions

@@ -1,4 +1,5 @@
 package Unicode::CLDR::Language;
+
 use XML::Rabbit;
 
 # ABSTRACT: Language names

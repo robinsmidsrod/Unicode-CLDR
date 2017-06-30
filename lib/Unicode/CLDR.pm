@@ -1,4 +1,5 @@
 package Unicode::CLDR;
+
 use Moose;
 use namespace::autoclean;
 use File::ShareDir ();

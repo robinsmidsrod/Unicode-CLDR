@@ -1,4 +1,5 @@
 package Unicode::CLDR::Role::ComputedIdAttribute;
+
 use Moose::Role;
 
 # ABSTRACT: Computes the id attribute from type and alt attributes

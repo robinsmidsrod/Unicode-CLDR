@@ -1,4 +1,5 @@
 package Unicode::CLDR::Identity;
+
 use XML::Rabbit;
 
 # ABSTRACT: Database version information

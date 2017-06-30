@@ -1,4 +1,5 @@
 package Unicode::CLDR::Role::DataQuality;
+
 use Moose::Role;
 
 # ABSTRACT: data_quality float attribute
